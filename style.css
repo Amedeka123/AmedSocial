@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Mono&display=swap');
 
 :root{
-    --color-white: hsl(252, 30%, 100%);
-    --color-light: hsl(252, 30%, 95%);
-    --color-gray: hsl(252, 15%, 65%);
-    --color-primary:hsl(252, 75%, 60%);
+    --primary-color-hue: 252;
+    --dark-color-lightness: 17%;
+    --light-color-lightness:95%;
+    --white-color-lightness:100%;
+    --color-white: hsl(252, 30%, var(--white-color-lightness));
+    --color-light: hsl(252, 30%, var(--light-color-lightness));
+    --color-gray: hsl(var(--primary-color-hue), 15%, 65%);
+    --color-primary:hsl(var(--primary-color-hue), 75%, 60%);
     --color-secndary:hsl(252, 100%, 90%);
     --color-success:hsl(120, 95%, 65%);
     --color-danger:hsl(0, 95%, 65%);
-    --color-dark:hsl(252, 30%, 17%);
+    --color-dark:hsl(252, 30%, var(--dark-color-lightness));
     --color-black:hsl(252, 30%, 10%);
     --border-radius:2rem;
     --card-border-raduis:1rem;
@@ -532,6 +536,7 @@ main .container .right{
     padding: 3rem;
     border-radius: var(--card-border-raduis);
     width: 50%;
+    box-shadow: 0 0 1rem var(--color-primary);
 }
 
 /*****************************FONTS COLORS******************************/
@@ -568,7 +573,6 @@ main .container .right{
 .customize-theme .choose-size span.active{
     background: var(--color-primary);
 }
-
 .customize-theme .color{
     margin-top: 2rem;
 }
@@ -604,7 +608,7 @@ main .container .right{
     background: hsl(202, 70%, 60%);
 }
 
-.customize-theme .color .choose-color span .active{
+.customize-theme .choose-color span.active{
     border: 5px solid white;
 }
 
@@ -690,6 +694,10 @@ main .container .right{
     .left .btn{
         display: none;
     }
+
+    .customize-theme .card{
+        width: 80vw;
+    }
 }
 
 /*==================================================
@@ -732,6 +740,10 @@ main .container .right{
   main .container .right{
     display: none;
   }
+
+  .customize-theme .card{
+    width: 92vw;
+}
 
 } 
 
